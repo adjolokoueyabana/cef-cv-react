@@ -12,7 +12,7 @@ function Header() {
       <div className="container">
 
         <Link className="navbar-brand" to="/">
-          Gael ADJOLOKOU
+          JOHN DOE
         </Link>
         {/* Bouton hamburger
             data-bs-toggle="collapse" : Cette instruction dit à Bootstrap quand on clique sur ce bouton,

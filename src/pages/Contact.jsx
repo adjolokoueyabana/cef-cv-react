@@ -11,15 +11,15 @@ function Contact() {
     >
       <div className="container">
 
-        <div className="bg-light p-5 rounded shadow">
+        <div className="bg-light p-2 rounded shadow">
 
           {/* Titre */}
 
-          <h1 className="text-center display-4 mb-4">
+          <h1 className="text-center display-4 mb-2">
             ME CONTACTER
           </h1>
 
-          <p className="text-center fs-4">
+          <p className="text-center fs-5">
             Pour me contacter en vue d'un entretien ou d'une future
             collaboration, merci de remplir le formulaire de contact.
           </p>
@@ -28,7 +28,7 @@ function Contact() {
             className="bg-primary mx-auto mb-5"
             style={{
               width: "300px",
-              height: "4px"
+              height: "3px"
             }}
           ></div>
 
@@ -44,7 +44,7 @@ function Contact() {
 
               <form>
 
-                <div className="mb-3">
+                <div className="mb-1">
                   <input
                     type="text"
                     className="form-control"
@@ -52,7 +52,7 @@ function Contact() {
                   />
                 </div>
 
-                <div className="mb-3">
+                <div className="mb-1">
                   <input
                     type="email"
                     className="form-control"
@@ -60,7 +60,7 @@ function Contact() {
                   />
                 </div>
 
-                <div className="mb-3">
+                <div className="mb-1">
                   <input
                     type="tel"
                     className="form-control"
@@ -68,7 +68,7 @@ function Contact() {
                   />
                 </div>
 
-                <div className="mb-3">
+                <div className="mb-1">
                   <input
                     type="text"
                     className="form-control"
@@ -76,7 +76,7 @@ function Contact() {
                   />
                 </div>
 
-                <div className="mb-3">
+                <div className="mb-1">
                   <textarea
                     className="form-control"
                     rows="6"
@@ -121,7 +121,7 @@ function Contact() {
                 title="Carte"
                 src="https://www.google.com/maps?q=40+Rue+Laure+Diebold+69009+Lyon&output=embed"
                 width="100%"
-                height="350"
+                height="240"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"

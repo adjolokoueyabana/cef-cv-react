@@ -5,35 +5,30 @@ function Services() {
       <section
         className="py-5 text-center text-white"
         style={{
-          backgroundImage: "url('/img/services-bg.jpg')",
+          backgroundImage: "url('/img/banner.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        {/*  Ajout du contenu javascript pour créer un voile noir transparent au-dessus de l'image de fond */}
-        <div
-          style={{
-            backgroundColor: "rgba(0,0,0,0.5)",
-            padding: "80px 20px"
-          }}
-        >
-          <h1>Mon offre de services</h1>
-          <p>
-            Voici les prestations sur lesquelles je peux vous accompagner.
-          </p>
-        </div>
       </section>
 
       {/* Services */}
-      <section className="container py-5">
+      <section className="container py-3">
 
-        <h2 className="text-center mb-3">
-          Mes services
-        </h2>
+        <h1 className="text-center mb-3">
+          MON OFFRE DE SERVICES
+        </h1>
 
-        <p className="text-center text-muted mb-5">
-          Des solutions adaptées à vos besoins numériques.
+        <p className="text-center fs-5">
+          Voici les prestations sur lesquelles je peux intervenir.
         </p>
+        <div
+        className="bg-primary mx-auto mb-4"
+        style={{
+            width: "300px",
+            height: "3px"
+        }}
+        ></div>
 
         <div className="row g-4">
 

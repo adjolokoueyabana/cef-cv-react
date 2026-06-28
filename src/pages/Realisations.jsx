@@ -9,39 +9,40 @@ function Realisations() {
   return (
     <>
       {/* Bannière */}
-
       <section
         className="py-5 text-center text-white"
         style={{
           backgroundImage: "url('/img/banner.jpg')",
           backgroundSize: "cover",
-          backgroundPosition: "center"
+          backgroundPosition: "center",
+          height: "80px"
         }}
       >
-        <div
-          style={{
-            backgroundColor: "rgba(0,0,0,0.5)",
-            padding: "80px 20px"
-          }}
-        >
-          <h1>Mes réalisations</h1>
-          <p>
-            Découvrez quelques projets réalisés durant ma formation.
-          </p>
-        </div>
       </section>
 
       {/* Portfolio */}
 
-      <section className="container py-5">
+      <section className="container py-3">
+        {/* mb-4 : signifie margin-bottom, Cela laisse un espace entre le titre et le paragraphe situé en dessous.
+            bg-primary : couleur bleue Bootstrap.
+            mx-auto : centre la ligne.
+            width: "300px" : longueur de la ligne.
+            height: "4px" : épaisseur.*/}
+        <h1 className="text-center mb-3">
+            PORTFOLIO
+        </h1>
 
-        <h2 className="text-center mb-4 border-bottom border-primary pb-2">
-          Portfolio
-        </h2>
-
-        <p className="text-center text-muted mb-5">
-          Voici quelques réalisations que j'ai développées durant ma formation.
+        <p className="text-center fs-5">
+          Voici quelques-unes de mes réalisations
         </p>
+    
+        <div
+        className="bg-primary mx-auto mb-4"
+        style={{
+            width: "300px",
+            height: "3px"
+        }}
+        ></div>
 
         <div className="row g-4">
 
@@ -49,15 +50,19 @@ function Realisations() {
 
           <div className="col-md-4">
 
-            <div className="card h-100 shadow-sm">
+            <div className="card h-50 shadow-sm">
 
               <img
                 src="/images/cv.png"
                 className="card-img-top"
                 alt="CV en ligne"
-              />
+                style={{
+                    height: "250px",
+                    objectFit: "cover",
+                }}
+                />
 
-              <div className="card-body text-center">
+              <div className="card-body mt-4 text-center">
 
                 <h3 className="h5">
                   CV en ligne
@@ -89,15 +94,19 @@ function Realisations() {
 
           <div className="col-md-4">
 
-            <div className="card h-100 shadow-sm">
+            <div className="card h-50 shadow-sm">
 
               <img
                 src="/images/cdc.png"
                 className="card-img-top"
                 alt="Cahier des charges"
+                style={{
+                    height: "250px",
+                    objectFit: "cover",
+                }}
               />
 
-              <div className="card-body text-center">
+              <div className="card-body mt-4 text-center">
 
                 <h3 className="h5">
                   Cahier des charges
@@ -129,22 +138,26 @@ function Realisations() {
 
           <div className="col-md-4">
 
-            <div className="card h-100 shadow-sm">
+            <div className="card h-50 shadow-sm">
 
               <img
                 src="/images/communaute.png"
                 className="card-img-top"
                 alt="Espace commentaire"
+                style={{
+                    height: "250px",
+                    objectFit: "cover",
+                }}
               />
 
-              <div className="card-body text-center">
+              <div className="card-body mt-4 text-center">
 
                 <h3 className="h5">
                   Espace commentaire
                 </h3>
 
                 <p>
-                  Développement d'un espace interactif permettant aux visiteurs
+                  Espace interactif permettant aux visiteurs
                   de publier et consulter des commentaires.
                 </p>
 
