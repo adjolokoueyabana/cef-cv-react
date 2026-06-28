@@ -4,13 +4,23 @@ import GitHubProfile from "../composants/GitHubProfile";
 
 
 function Accueil() {
-    const [profil, setProfil] = useState(null);
 
+    {/* Récuperation des informations du profil GitHub via l'API.
+        hooks (useState) : pour stocker le profil.
+        hooks (useEffect) pour effectuer le chargement lors de l'ouverture de la page.*/}
+    const [profil, setProfil] = useState(null);
     useEffect(() => {
     fetch("https://api.github.com/users/github-john-doe")
         .then((response) => response.json())
         .then((data) => setProfil(data));
     }, []);
+
+    const allerAPropos = () => {
+        document.getElementById("apropos").scrollIntoView({
+        behavior: "smooth"
+    });
+    };
+    
   return (
     <>
       {/* HERO : image de fond + texte centré */}
@@ -21,7 +31,7 @@ function Accueil() {
 
           <h2>Développeur web full stack</h2>
 
-          <button className="btn btn-primary btn-lg mt-3">
+          <button className="btn btn-primary btn-lg mt-3" onClick={allerAPropos}>
             En savoir plus
           </button>
 
@@ -29,7 +39,7 @@ function Accueil() {
       </section>
 
       {/* Section À propos + Compétences */}
-      <section className="container my-5">
+      <section id="apropos" className="container my-5">
 
         <div className="card shadow p-4">
 
@@ -45,24 +55,24 @@ function Accueil() {
 
               <p>
                 Passionné par l'informatique et les nouvelles technologies,
-                j'ai suivi une formation d'intégrateur-développeur web au CEF.
+                j'ai suivi une formation d'<strong>intégrateur-développeur web</strong> au CEF.
               </p>
 
               <p>
                 Au cours de cette formation, j'ai acquis des bases solides
-                pour travailler dans le domaine du développement web.
+                pour travailler dans le domaine du <strong>développement web.</strong>
               </p>
 
               <p>
                 Basé à Lyon, je suis en recherche d'une alternance afin
-                de consolider ma formation de développeur web full stack.
+                de consolider ma formation de <strong>développeur web full stack.</strong>
               </p>
 
               <p>
                 J'accorde une attention particulière à la qualité du code
                 et aux bonnes pratiques du web.
               </p>
-              
+
               {/* PROFIL GITHUB */}
               <h2 className="mb-4 border-bottom border-primary pb-2"> Profil GitHub </h2>
                 {profil && <GitHubProfile profil={profil} />}

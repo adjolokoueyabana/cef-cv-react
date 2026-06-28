@@ -36,33 +36,36 @@ function Blog() {
   return (
     <>
       {/* Bannière */}
-
       <section
+        className="py-5 text-center text-white"
         style={{
           backgroundImage: "url('/img/banner.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: "100px"
+          height: "80px"
         }}
       />
 
-      {/* Titre */}
+      {/* Titre 
+          container : le contenu est centré et ne touche pas les bords de la fenêtre.
+          py-5 : on ajoute environ 16px de padding en haut et en bas pour aérer la section.*/}
 
-      <section className="container py-5">
+      <section className="container py-3">
 
         <h1 className="text-center display-4">
           BLOG
         </h1>
 
-        <p className="text-center fs-4">
+        <p className="text-center fs-5">
           Retrouvez ici quelques articles sur le développement web.
         </p>
-
+        
+        {/* bg-primary : couleur bleue Bootstrap pour la barre */}
         <div
           className="mx-auto bg-primary mb-5"
           style={{
             width: "300px",
-            height: "4px"
+            height: "3px"
           }}
         ></div>
 
@@ -74,12 +77,16 @@ function Blog() {
 
             <div key={index} className="col-md-4">
 
-              <div className="card h-100">
+              <div className="card h-80">
 
                 <img
                   src={article.image}
                   className="card-img-top"
                   alt={article.titre}
+                  style={{
+                    height: "150px",
+                    objectFit: "cover",
+                }}
                 />
 
                 <div className="card-body">
